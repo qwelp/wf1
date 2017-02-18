@@ -1,5 +1,20 @@
-body {
-  margin: 0;
-}
+// @extend .class;
+// font-family: 'Roboto', sans-serif;
+// font-weight: 300i, 400, 500
+// font-family: 'webissimo', sans-serif;
 
-@import 'common/greating';
+//adjustment
+$footer-height: 185px;
+
+//color
+$white: #fff;
+
+//adjustment
+@import "layout/fonts";
+@import "layout/adjustment";
+
+//sprites
+@import "sprite/sprite";
+
+//style
+@import 'sections/**/*.scss';

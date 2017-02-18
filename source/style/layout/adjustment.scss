@@ -1,0 +1,33 @@
+html, body {
+	width: 100%;
+	height: 100%;
+}
+
+.wrapper {
+	min-height: 100%;
+	overflow: hidden;
+	position: relative;
+
+	&:after {
+		height: $footer-height;
+		background: #99f9d7;
+	}
+}
+
+.footer {
+	height: $footer-height;
+	margin-top: -$footer-height;
+	position: relative;
+	background: #707070;
+	//overflow: hidden;
+}
+
+.test {
+	border: 1px solid #c00;
+}
+
+.clearfix:after {
+	content: "";
+	display: table;
+	clear: both;
+}

@@ -68,16 +68,16 @@
   "menuFooter":
   [{
     "name": "Мои работы",
-    "url": "/build/works.html"
+    "url": "/wf1/build/works.html"
   },{
     "name": "Обо мне",
-    "url": "/build/about.html"
+    "url": "/wf1/build/about.html"
   },{
     "name": "Блог",
-    "url": "/build/blog.html"
+    "url": "/wf1/build/blog.html"
   },{
     "name": "Авторизация",
-    "url": "/build/index.html"
+    "url": "/wf1/build/index.html"
   }],
   "blog": [{
     "name": "Самое важное в SASS",

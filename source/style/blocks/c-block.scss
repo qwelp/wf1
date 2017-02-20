@@ -1,0 +1,32 @@
+.c-block-title {
+	@include webissimo;
+	color: #566358;
+	font-size: 35px;
+	line-height: 45px;
+	text-align: center;
+	text-transform: uppercase;
+
+	&__wrap {
+		display: inline-block;
+		padding-bottom: 20px;
+		position: relative;
+		margin-bottom: 40px;
+
+		&:after {
+			@include centered(x);
+			bottom: 0;
+			display: inline-block;
+			content: "";
+			height: 3px;
+			width: 89px;
+			background: #566358;
+			margin-left: -5px;
+			margin-right: -5px;
+			margin-top: 20px;
+		}
+	}
+}
+
+.c-block-text {
+
+}

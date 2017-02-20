@@ -1,0 +1,54 @@
+.c-skills-group__title {
+	color: #566358;
+	font-size: 28px;
+	@include roboto(m);
+}
+
+.c-skills-group {
+
+}
+
+$margin_skill: 30px;
+
+.l-skills-list {
+	margin-left: -$margin_skill;
+	margin-top: 20px;
+	margin-bottom: 30px;
+
+	&__item {
+		display: inline-block;
+		vertical-align: middle;
+		margin-left: $margin_skill;
+	}
+}
+
+.c-skill {
+	position: relative;
+}
+
+.c-skill__title {
+	position: absolute;
+	@include centered();
+	width: 70px;
+	@include roboto(m);
+	font-size: 13px;
+	color: $icon-hover;
+	text-align: center;
+}
+
+.c-skills__circle {
+	width: 110px;
+	height: 110px;
+	display: block;
+	fill: transparent;
+	stroke-width: 15;
+}
+
+.c-skills__circle-under {
+	stroke: $circle-under;
+}
+
+.c-skills__circle-above {
+	stroke: $circle-above;
+	stroke-dasharray: 140;
+}

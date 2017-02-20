@@ -1,0 +1,28 @@
+.l-feedback {
+	position: relative;
+	height: 834px;
+	background: url(../img/works_bg.png) no-repeat 0 0;
+	background-size: cover;
+
+	&:before {
+		position: absolute;
+		top: 5px;
+		right: 5px;
+		content: "";
+		width: 141px;
+		height: 120px;
+		display: inline-block;
+		background: url(../img/list3.png) no-repeat 0 0;
+	}
+
+	&:after {
+		position: absolute;
+		top: 200px;
+		left: 175px;
+		content: "";
+		width: 58px;
+		height: 108px;
+		display: inline-block;
+		background: url(../img/list1.png) no-repeat 0 0;
+	}
+}

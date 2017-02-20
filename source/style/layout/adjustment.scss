@@ -3,31 +3,57 @@ html, body {
 	height: 100%;
 }
 
+body {
+	line-height: 1.4;
+	@include roboto();
+	font-size: 16px;
+	color: #566358;
+	background: #f4f5f0;
+}
+
+p {
+
+}
+
+ul, li {
+	margin: 0;
+	padding: 0;
+}
+
+ul {
+	list-style-type: none;
+}
+
+.welcome-bg {
+	background: url(../img/bg.png) no-repeat 0 0;
+	background-size: cover;
+}
 .wrapper {
 	min-height: 100%;
 	overflow: hidden;
 	position: relative;
 
 	&:after {
-		height: $footer-height;
-		background: #99f9d7;
+		//height: $footer-height;
+		//display: block;
+		//content: "";
 	}
 }
 
 .footer {
+	position: relative;
 	height: $footer-height;
 	margin-top: -$footer-height;
-	position: relative;
-	background: #707070;
-	//overflow: hidden;
 }
 
 .test {
 	border: 1px solid #c00;
 }
 
-.clearfix:after {
-	content: "";
-	display: table;
-	clear: both;
+.clearfix {
+	&:after {
+		content: "";
+		display: table;
+		clear: both;
+	}
 }

@@ -1,0 +1,17 @@
+.c-menu-burger {
+	position: absolute;
+	top: 30px;
+	right: 30px;
+	cursor: pointer;
+}
+
+.c-menu-burger__icon {
+	fill: #fff;
+	width: 40px;
+	height: 35px;
+	transition: all .3s;
+
+	&:hover {
+		fill: $icon-hover;
+	}
+}

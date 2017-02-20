@@ -1,0 +1,51 @@
+.c-works-img {
+
+	&__wrapPic {
+		text-align: center;
+	}
+
+	&__pic {
+
+	}
+
+	&__items {
+		@extend %clearfix;
+		margin-top: 100px;
+	}
+
+	&__item {
+		float: left;
+		width: 50%;
+		position: relative;
+
+		&-wrapPic {
+
+			&:after {
+				display: block;
+				content: "";
+				position: absolute;
+				left: 0;
+				top: 0;
+				width: 100%;
+				height: 100%;
+				background: rgba(#b0b7aa, .7);
+			}
+		}
+
+		&-pic {
+			vertical-align: middle;
+			width: 100%;
+			height: auto;
+		}
+
+		&-wrapIcon {
+			@include centered();
+		}
+
+		&-icon {
+			fill: #fff;
+			width: 43px;
+			height: 27px;
+		}
+	}
+}

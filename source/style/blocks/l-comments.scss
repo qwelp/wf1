@@ -1,0 +1,70 @@
+.l-comments {
+
+	&__title {
+		text-align: center;
+		margin-top: 80px;
+	}
+	text-align: center;
+	position: relative;
+
+	&:before {
+		position: absolute;
+		top: 80px;
+		left: 37px;
+		content: "";
+		width: 100px;
+		height: 100px;
+		display: inline-block;
+		background: url(../img/list2.png) no-repeat 0 0;
+	}
+}
+
+.c-comments {
+	@extend %clearfix;
+	margin-left: -20px;
+	display: inline-block;
+
+
+	&__item {
+		width: 380px;
+		float: left;
+		margin-left: 20px;
+		background: url(../img/kv.png) no-repeat 0 83px;
+
+		&-pic {
+			text-align: center;
+			margin-bottom: 15px;
+		}
+
+		&picImg {
+			vertical-align: middle;
+		}
+
+		&-text {
+			margin-bottom: 30px;
+			text-align: left;
+		}
+
+		&-name {
+			color: #4e8839;
+			@include roboto(bi);
+			margin-bottom: 5px;
+		}
+
+		&-post {
+			color: #373e42;
+			margin-left: 10px;
+			display: inline-block;
+
+			&:before {
+				position: relative;
+				top: 2px;
+				content: "—";
+				display: inline-block;
+				color: #adafad;
+				margin-right: 8px;
+				font-weight: bold;
+			}
+		}
+	}
+}

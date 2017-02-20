@@ -1,0 +1,67 @@
+.l-about {
+	@extend %clearfix;
+	background: $about_right;
+}
+
+.l-about__col {
+	position: relative;
+
+	float: left;
+	padding-bottom: 40px;
+	width: 50%;
+
+	&_left {
+		background: $about_left;
+
+		& .c-about__triangle {
+			left: 0;
+			fill: $about_left;
+		}
+
+		&-wrap {
+			width: 443px;
+			float: right;
+			margin-right: 78px;
+
+			margin-top: -42px;
+		}
+	}
+
+	&_right {
+		background: $about_right;
+
+		& .c-about__triangle {
+			right: 0;
+			fill: $about_right;
+		}
+
+		&-wrap {
+			width: 589px;
+			margin-left: 38px;
+		}
+	}
+}
+
+.c-about__triangle {
+	display: block;
+	width: 100%;
+	height: 110px;
+	position: absolute;
+	bottom: 100%;
+}
+
+.c-about__pic {
+	margin-bottom: 20px;
+}
+
+.c-arrow {
+	@include centered(x);
+	bottom: 70px;
+	z-index: 10;
+
+	&__icon {
+		width: 26px;
+		height: 16px;
+		fill: #c8d9d1;
+	}
+}

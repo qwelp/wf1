@@ -1,0 +1,41 @@
+.c-contact-popup {
+	width: 380px;
+	top: 228px;
+	@include centered(x);
+	background: rgba(#f4f5f0, .85);
+	border-radius: 5px;
+	padding: 35px 40px;
+}
+
+.c-contact-popup__list {
+
+}
+
+.c-contact-popup__wrap {
+	display: table;
+	width: 100%;
+}
+.c-contact-popup__col {
+	display: table-cell;
+	vertical-align: middle;
+
+	&:last-child {
+		width: 100%;
+		padding-left: 15px;
+	}
+}
+.c-contact-popup__item {
+	@include roboto(m);
+	color: #455a64;
+	&:not(:first-child){
+		margin-top: 25px;
+	}
+}
+
+.c-contact-popup__icon {
+	position: relative;
+	top: 3px;
+	fill: #6c9c5a;
+	width: 24px;
+	height: 24px;
+}

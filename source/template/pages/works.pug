@@ -1,0 +1,94 @@
+extends ../_template
+
+
+block variables
+	- var title = 'Works'
+
+
+block content
+	section.l-section.l-hero
+		.l-hero__bg
+			img.hero__bg-img(src="assets/img/water.jpg" alt="")
+		.l-hero__container
+			img.c-hero__title-pic(src="assets/img/portfolio_header.png" alt="")
+			.c-user
+				img.c-user__pic(src="assets/img/fashmark-men-trends-nature.png" alt="")
+				.c-user__name Владимир Астахов
+				.c-user__occ Личный сайт веб разработчика
+		ul.c-socials.c-socials-header
+			- var icons = ['vk', 'github', 'in']
+			each icon in icons
+				li.c-socials__item
+					a.c-socials__link(href="#")
+						svg.c-socials__icon
+							use(xlink:href=`assets/img/sprite.svg#${icon}`)
+		.c-menu-burger
+			svg.c-menu-burger__icon
+				use(xlink:href=`assets/img/sprite.svg#hamburger`)
+	section.l-section.l-work
+		.l-work__col.l-work__col_left
+			svg(viewBox="0 0 1000 110" preserveAspectRatio="none").c-work__triangle
+				polygon(points="0,0 0,110 1000,110")
+		.l-work__col.l-work__col_right
+			svg(viewBox="0 0 1000 110" preserveAspectRatio="none").c-work__triangle
+				polygon(points="0,110 1000,110 1000,0")
+		.l-work__row_title
+			.c-section-title(style="background-image: url('assets/img/works_header.png')") МОИ РАБОТЫ
+		.l-work-jobs
+			.l-work-jobs__col.l-work-jobs__col_left
+				.l-work-jobs__col_left-wrap
+					.c-block-title
+						.c-block-title__wrap Сайт школы онлайн Образования
+					.l-work-jobs__tags HTML , CSS, JAVASCRIPT
+					a.c-btn.c-btn__green(href="#")
+						svg.c-btn__icon
+							use(xlink:href=`assets/img/sprite.svg#link`)
+						| Посмотреть сайт
+			.l-work-jobs__col.l-work-jobs__col_right
+				.c-works-img
+					.c-works-img__wrapPic
+						img.c-works-img__pic(src="assets/img/work-1.png" alt="")
+					.c-works-img__items
+						.c-works-img__item
+							.c-works-img__item-wrapPic
+								img.c-works-img__item-pic(src="assets/img/work-2.png" alt="")
+							.c-works-img__item-wrapIcon
+								a(href="#")
+									svg.c-works-img__item-icon
+										use(xlink:href=`assets/img/sprite.svg#portf_arrow_down`)
+						.c-works-img__item
+							.c-works-img__item-wrapPic
+								img.c-works-img__item-pic(src="assets/img/work-3.png" alt="")
+							.c-works-img__item-wrapIcon
+								a(href="#")
+									svg.c-works-img__item-icon
+										use(xlink:href=`assets/img/sprite.svg#portf_arrow_up`)
+	section.l-section.l-comments
+		.l-comments__title
+			.c-section-title(style="background-image: url('assets/img/about_header.png')") Что обо мне<br />говорят
+		.c-comments
+			each item in comment
+				.c-comments__item
+					.c-comments__item-pic
+						img.c-comments__item-picImg(src=`assets/img/${item.img}` alt="")
+					.c-comments__item-text=item.text
+					.c-comments__item-name=item.name
+					.c-comments__item-post=item.post
+	section.l-section.l-feedback
+		.c-feedback
+			form(action="")
+				.c-block-title
+					.c-block-title__wrap Связаться со мной
+				.c-feedback__group
+					input.c-feedback__text(type="text" placeholder="Имя" name="name")
+				.c-feedback__group
+					input.c-feedback__text(type="email" placeholder="Email" name="email")
+				.c-feedback__group
+					textarea.c-feedback__text.c-feedback__textarea(placeholder="Ваше сообщение" name="msg")
+				.c-feedback__group.c-feedback__group-btn
+					.c-feedback__group-btnRow
+						input.c-btn-form(type="submit" value="Отправить")
+					.c-feedback__group-btnRow
+						input.c-btn-form(type="reset" value="Очистить")
+
+

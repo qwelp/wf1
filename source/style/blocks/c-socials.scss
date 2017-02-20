@@ -1,0 +1,62 @@
+.c-socials {
+
+}
+
+.c-socials__item {
+	display: inline-block;
+	vertical-align: middle;
+
+	&:not(:first-child) {
+		margin-left: 26px;
+	}
+}
+
+.c-socials__icon {
+	width: 25px;
+	height: 35px;
+
+	transition: all .3s;
+
+	&:hover {
+
+	}
+}
+
+.c-socials-header {
+	position: absolute;
+	top: 20px;
+	left: 20px;
+
+	& .c-socials__icon {
+		fill: #fff;
+
+		&:hover {
+			fill: $icon-hover;
+		}
+	}
+}
+
+.c-socials-footer {
+
+	& .c-socials__icon {
+		fill: #fff;
+		opacity: .5;
+
+		&:hover {
+			opacity: 1;
+		}
+	}
+}
+
+.c-socials-welcome {
+	margin-top: 30px;
+	& .c-socials__icon {
+		fill: #fff;
+		opacity: .5;
+
+		&:hover {
+			opacity: 1;
+			fill: $icon-hover;
+		}
+	}
+}

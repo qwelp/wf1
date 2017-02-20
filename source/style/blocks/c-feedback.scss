@@ -1,0 +1,78 @@
+.c-feedback {
+	@include centered(x);
+	top: 60px;
+	width: 380px;
+	background: rgba(#e0e0dc, .6);
+	padding-top: 40px;
+	overflow: hidden;
+	border-radius: 6px;
+
+	&__text {
+		box-sizing: border-box;
+		border: 0;
+		padding: 15px 20px;
+		color: #5d5a55;
+		@include roboto();
+		width: 100%;
+		margin-bottom: 20px;
+		border-radius: 30px;
+		outline: none;
+	}
+
+	&__textarea {
+		height: 140px;
+	}
+
+	&__group {
+		padding-left: 20px;
+		padding-right: 20px;
+
+		&-btn {
+			padding: 0;
+			display: table;
+			width: 100%;
+		}
+
+		&-btnRow {
+			display: table-cell;
+			vertical-align: top;
+			position: relative;
+
+			&:not(:first-child){
+
+				&:before {
+					position: absolute;
+					top: 0;
+					left: -1px;
+					content: "";
+					display: inline-block;
+					width: 2px;
+					height: 100%;
+					background: rgba(#dee3e7, .5);
+				}
+			}
+		}
+	}
+}
+
+
+.c-btn-form {
+	background: #659652;
+	padding-top: 12px;
+	padding-bottom: 12px;
+	color: #ffffff;
+	@include roboto(m);
+	display: block;
+	text-align: center;
+	border: 0;
+	width: 100%;
+	outline: none;
+	text-decoration: none;
+
+	&:hover {
+		opacity: .85;
+	}
+	&:active {
+		opacity: .95;
+	}
+}

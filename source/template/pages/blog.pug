@@ -1,0 +1,58 @@
+extends ../_template
+
+
+block variables
+	- var title = 'Blog'
+
+
+block content
+	section.l-section.l-hero
+		.l-hero__bg
+			img.hero__bg-img(src="assets/img/water.jpg" alt="")
+		.l-hero__container
+			img.c-hero__title-pic(src="assets/img/portfolio_header.png" alt="")
+			.c-user
+				img.c-user__pic(src="assets/img/fashmark-men-trends-nature.png" alt="")
+				.c-block-title
+					.c-block-title__wrap.c-block-title__blog Блог
+				.c-user__occ Статьи, которые я написал
+		ul.c-socials.c-socials-header
+			- var icons = ['vk', 'github', 'in']
+			each icon in icons
+				li.c-socials__item
+					a.c-socials__link(href="#")
+						svg.c-socials__icon
+							use(xlink:href=`assets/img/sprite.svg#${icon}`)
+		.c-menu-burger
+			svg.c-menu-burger__icon
+				use(xlink:href=`assets/img/sprite.svg#hamburger`)
+	section.l-section.l-work
+		.l-work__col.l-work__col_left.l-blog__work
+			svg(viewBox="0 0 1000 110" preserveAspectRatio="none").c-work__triangle.l-blog__triangle
+				polygon(points="0,0 0,110 1000,110")
+		.l-work__col.l-work__col_right.l-blog__work
+			svg(viewBox="0 0 1000 110" preserveAspectRatio="none").c-work__triangle.l-blog__triangle
+				polygon(points="0,110 1000,110 1000,0")
+	section.l-section.l-blog
+		.l-blog__col.l-blog__col_left
+			.l-blog-menu
+				ul.l-blog-menu__items
+					each item, i in ['Самое важное в SASS','Приёмы в вёрстке, без которых не обходится ни один сайт','Самый необходимый набор Gulp плагинов','Почему я выбрал Jade']
+						li.l-blog-menu__item
+							if i == 0
+								a.l-blog-menu__link.active(href="#")=item
+							else
+								a.l-blog-menu__link(href="#")=item
+		.l-blog__col.l-blog__col_right
+			.l-blog-list
+				ul.l-blog-list__items
+					each item, i in blog
+						li.l-blog-list__item
+							if i == 0
+								.l-blog-list__item-name.active=item.name
+								.l-blog-list__item-date=item.date
+								.l-blog-list__item-text!=item.text
+							else
+								.l-blog-list__item-name=item.name
+								.l-blog-list__item-date=item.date
+								.l-blog-list__item-text!=item.text

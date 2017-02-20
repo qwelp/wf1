@@ -1,0 +1,32 @@
+.c-section-title {
+	position: relative;
+	@include webissimo;
+	color: #373e42;
+	font-size: 63px;
+	line-height: 55px;
+	text-align: center;
+	padding: 45px 80px;
+	display: inline-block;
+	background-size: contain;
+	background-position: center center;
+	background-repeat: no-repeat;
+
+	&:before, &:after {
+		content: "";
+		display: block;
+		width: 22px;
+		height: 5px;
+		@include centered(y);
+		background: rgba(#c9c9c9, .8);
+	}
+
+	$dash-margin: 40px;
+
+	&:before {
+		left: $dash-margin;
+	}
+
+	&:after {
+		right: $dash-margin;
+	}
+}

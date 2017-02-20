@@ -1,0 +1,87 @@
+$work: #f8f9f5;
+
+.l-work {
+	@extend %clearfix;
+	background: $work;
+
+	&__col {
+		position: relative;
+
+		float: left;
+		padding-bottom: 40px;
+		width: 50%;
+
+		&_left {
+			background: $work;
+
+			& .c-work__triangle {
+				left: 0;
+				fill: $work;
+			}
+		}
+
+		&_right {
+			background: $work;
+
+			& .c-work__triangle {
+				right: 0;
+				fill: $work;
+			}
+		}
+	}
+
+	&__row {
+
+		&_title {
+			text-align: center;
+
+			& .c-section-title {
+				margin-top: -30px;
+				margin-bottom: 30px;
+			}
+		}
+	}
+}
+
+.c-work__triangle {
+	display: block;
+	width: 100%;
+	height: 110px;
+	position: absolute;
+	bottom: 100%;
+}
+
+.l-work-jobs {
+	@extend %clearfix;
+	background: #ebefe2;
+
+	&__col {
+		position: relative;
+		float: left;
+		width: 50%;
+
+		&_left {
+			background: #ebefe2;
+			padding-top: 244px;
+			padding-bottom: 254px;
+
+			&-wrap {
+				float: right;
+				width: 320px;
+				margin-right: 143px;
+				text-align: center;
+			}
+		}
+
+		&_right {
+			background: #e1e4d7;
+			padding-top: 114px;
+		}
+	}
+
+	&__tags {
+		color: #4e8839;
+		@include roboto(m);
+		margin-bottom: 55px;
+	}
+}

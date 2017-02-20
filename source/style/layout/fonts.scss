@@ -1,8 +1,41 @@
-@import url('https://fonts.googleapis.com/css?family=Roboto:300i,400,500&subset=cyrillic');
-
+@import url('https://fonts.googleapis.com/css?family=Roboto:300,300i,400,500,700,700i&subset=cyrillic');
 @font-face {
 	font-family: 'webissimo';
 	src: url('../fonts/Sansus-Webissimo-Regular.ttf');
 	font-weight: normal;
 	font-style: normal;
+}
+
+@mixin webissimo {
+	font-family: 'webissimo';
+}
+
+@mixin roboto ($size: n) {
+	font-family: 'Roboto', sans-serif;
+
+	@if($size == n) {
+		font-weight: normal;
+	}
+
+	@if($size == l) {
+		font-weight: 300;
+	}
+
+	@if($size == li) {
+		font-weight: 300;
+		font-style: italic;
+	}
+
+	@if($size == m) {
+		font-weight: 500;
+	}
+
+	@if($size == b) {
+		font-weight: 700;
+	}
+
+	@if($size == bi) {
+		font-weight: 700;
+		font-style: italic;
+	}
 }

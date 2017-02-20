@@ -1,11 +1,30 @@
-extends ../_template
+extends ../_template_header
+
 
 block variables
-	- var title = 'Home page'
+	- var title = 'Welcome'
+
 
 block content
-	.wrapper
-		.main
-			p 1
-	.footer
-		p 2
+	.c-welcome
+		.c-welcome__container
+			.c-welcome__user
+				img.c-user__pic(src="assets/img/fashmark-men-trends-nature.png" alt="")
+				.c-user__name Владимир Астахов
+				.c-user__occ Личный сайт веб разработчика
+			ul.c-socials.c-socials-welcome
+				- var icons = ['vk', 'github', 'in']
+				each icon in icons
+					li.c-socials__item
+						a.c-socials__link(href="#")
+							svg.c-socials__icon
+								use(xlink:href=`assets/img/sprite.svg#${icon}`)
+		.c-welcome__group.c-welcome__group-btn
+			.c-feedback__group-btnRow
+				a.c-btn-form(href="/works.html") Мой работы
+			.c-feedback__group-btnRow
+				a.c-btn-form(href="/about.html") Обо мне
+			.c-feedback__group-btnRow.c-feedback__group-link
+				a.c-btn-form(href="/blog.html") Блог
+	.c-welcome-footer © Владимир Астахов | создано с любовью в LoftSchool | 2016
+	a.c-welcome-autr(href="#") Авторизоваться

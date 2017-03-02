@@ -1,6 +1,6 @@
 {
-  "dir": "/",
-  "dir1": "/wf1/build/",
+  "dir1": "/",
+  "dir": "/wf1/build/",
   "skills":
    [{
       "title": "Frontend",

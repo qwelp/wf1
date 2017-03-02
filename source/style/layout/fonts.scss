@@ -1,4 +1,6 @@
 @import url('https://fonts.googleapis.com/css?family=Roboto:300,300i,400,500,700,700i&subset=cyrillic');
+@import url(http://fonts.googleapis.com/css?family=Vollkorn|Roboto);
+
 @font-face {
 	font-family: 'webissimo';
 	src: url('../fonts/Sansus-Webissimo-Regular.ttf');
@@ -6,6 +8,21 @@
 	font-style: normal;
 }
 
+@font-face {
+	font-family: 'forest';
+	src: url('../fonts/forest.eot?44423879');
+	src: url('../fonts/forest.eot?44423879#iefix') format('embedded-opentype'),
+	url('../fonts/forest.woff2?44423879') format('woff2'),
+	url('../fonts/forest.woff?44423879') format('woff'),
+	url('../fonts/forest.ttf?44423879') format('truetype'),
+	url('../fonts/forest.svg?44423879#forest') format('svg');
+	font-weight: normal;
+	font-style: normal;
+}
+
+@mixin forest {
+	font-family: 'forest';
+}
 @mixin webissimo {
 	font-family: 'webissimo';
 }
@@ -15,6 +32,10 @@
 
 	@if($size == n) {
 		font-weight: normal;
+	}
+
+	@if($size == i) {
+		font-style: italic;
 	}
 
 	@if($size == l) {

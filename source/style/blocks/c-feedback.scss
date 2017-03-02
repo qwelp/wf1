@@ -1,19 +1,35 @@
 .c-feedback {
 	@include centered(x);
+	position: absolute;
 	top: 60px;
 	width: 380px;
-	background: rgba(#e0e0dc, .6);
+	//background: rgba(#e0e0dc, .6);
+	//background-image: url(../img/works_bg.png);
 	padding-top: 40px;
 	overflow: hidden;
 	border-radius: 6px;
+	background-size: cover;
 
+	&__blur {
+		position: absolute;
+		filter: blur(20px);
+
+		background: url(../img/works_bg.png) no-repeat;
+		background-size: cover;
+
+	}
+
+	&__form {
+		position: relative;
+
+	}
 	&__text {
 		box-sizing: border-box;
 		border: 0;
 		padding: 15px 20px;
 		color: #5d5a55;
 		@include roboto();
-		width: 100%;
+		width: 90%;
 		margin-bottom: 20px;
 		border-radius: 30px;
 		outline: none;
@@ -22,6 +38,8 @@
 	&__textarea {
 		height: 140px;
 	}
+
+
 
 	&__group {
 		padding-left: 20px;
@@ -56,6 +74,7 @@
 }
 
 
+
 .c-btn-form {
 	background: #659652;
 	padding-top: 12px;
@@ -68,6 +87,7 @@
 	width: 100%;
 	outline: none;
 	text-decoration: none;
+	cursor: pointer;
 
 	&:hover {
 		opacity: .85;

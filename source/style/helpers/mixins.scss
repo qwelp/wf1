@@ -28,3 +28,19 @@
 %test {
 	border: 1px solid #c00;
 }
+
+@mixin desktop() {
+	@media screen and (max-width: 1200px) {
+		@content;
+	}
+}
+@mixin tablet() {
+	@media screen and (max-width: 768px) {
+		@content;
+	}
+}
+@mixin iphone() {
+	@media screen and (max-width: 480px) {
+		@content;
+	}
+}

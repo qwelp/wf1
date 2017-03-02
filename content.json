@@ -1,4 +1,6 @@
 {
+  "dir": "/",
+  "dir1": "/wf1/build/",
   "skills":
    [{
       "title": "Frontend",
@@ -68,16 +70,16 @@
   "menuFooter":
   [{
     "name": "Мои работы",
-    "url": "/wf1/build/works.html"
+    "url": "works.html"
   },{
     "name": "Обо мне",
-    "url": "/wf1/build/about.html"
+    "url": "about.html"
   },{
     "name": "Блог",
-    "url": "/wf1/build/blog.html"
+    "url": "blog.html"
   },{
     "name": "Авторизация",
-    "url": "/wf1/build/index.html"
+    "url": "index.html"
   }],
   "blog": [{
     "name": "Самое важное в SASS",

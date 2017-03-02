@@ -1,0 +1,13 @@
+.button_container#toggle
+	span.top
+	span.middle
+	span.bottom
+.overlay#overlay
+	nav.overlay-menu
+		ul
+			each item, index in menuFooter
+				li
+					if(index == 0)
+						a.active(href=`${dir}${item.url}`)=item.name
+					else
+						a(href=`${dir}${item.url}`)=item.name

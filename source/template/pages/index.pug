@@ -6,25 +6,74 @@ block variables
 
 
 block content
-	.c-welcome
-		.c-welcome__container
-			.c-welcome__user
-				img.c-user__pic(src="assets/img/fashmark-men-trends-nature.png" alt="")
-				.c-user__name Владимир Астахов
-				.c-user__occ Личный сайт веб разработчика
-			ul.c-socials.c-socials-welcome
-				- var icons = ['vk', 'github', 'in']
-				each icon in icons
-					li.c-socials__item
-						a.c-socials__link(href="#")
-							svg.c-socials__icon
-								use(xlink:href=`assets/img/sprite.svg#${icon}`)
-		.c-welcome__group.c-welcome__group-btn
-			.c-feedback__group-btnRow
-				a.c-btn-form(href="/wf1/build/works.html") Мой работы
-			.c-feedback__group-btnRow
-				a.c-btn-form(href="/wf1/build/about.html") Обо мне
-			.c-feedback__group-btnRow.c-feedback__group-link
-				a.c-btn-form(href="/wf1/build/blog.html") Блог
-	.c-welcome-footer © Владимир Астахов | создано с любовью в LoftSchool | 2016
-	a.c-welcome-autr(href="#") Авторизоваться
+	.waterWebgl
+		.Background
+			canvas.Background-canvas
+	.c-welcome-wrapper
+		.c-welcome-autr
+			a.c-welcome-autr__link.js-aut-flip#js-aut-flip(href="#") Авторизоваться
+		.c-welcome-popup
+			.c-welcome
+				.flip-container
+					.flipper
+						.front
+							.c-welcome__container
+								.c-welcome__user
+									img.c-user__pic(src="assets/img/fashmark-men-trends-nature.png" alt="")
+									.c-user__name Владимир Астахов
+									.c-user__occ Личный сайт веб разработчика
+								ul.c-socials.c-socials-welcome
+									- var icons = ['vk', 'github', 'in']
+									each icon in icons
+										li.c-socials__item
+											a.c-socials__link(href="#")
+												svg.c-socials__icon
+													use(xlink:href=`assets/img/sprite.svg#${icon}`)
+							.c-welcome__group.c-welcome__group-btn
+								.c-feedback__group-btnRow
+									a.c-btn-form(href=`${dir}works.html`) Мой работы
+								.c-feedback__group-btnRow
+									a.c-btn-form(href=`${dir}about.html`) Обо мне
+								.c-feedback__group-btnRow.c-feedback__group-link
+									a.c-btn-form(href=`${dir}blog.html`) Блог
+						.back
+							form(action="").c-welcome-form__form
+								.c-welcome-form
+									.c-welcome-form__col
+										.c-welcome-form__title Авторизуйтесь
+									.c-welcome-form__col
+										.c-welcome-form__col-input
+											.c-welcome-form__col-row
+												svg.c-welcome-form__input-icone
+													use(xlink:href=`assets/img/sprite.svg#login`)
+											.c-welcome-form__col-row
+												input.c-welcome-form__input-text(type="login" name="login" id="login-field" placeholder="Логин")
+									.c-welcome-form__col
+										.c-welcome-form__col-input
+											.c-welcome-form__col-row
+												svg.c-welcome-form__input-icone
+													use(xlink:href=`assets/img/sprite.svg#password`)
+											.c-welcome-form__col-row
+													input.c-welcome-form__input-text(type="password" name="password" id="password-field" placeholder="Пароль")
+									.c-welcome-form__col
+										label.c-welcome-form__label-checkbox(for="man")
+											input.c-welcome-form__input-checkbox(type="checkbox" id="man" name="man" checked="checked")
+											.c-welcome-form__input-checkbox__active
+										span.c-welcome-form__label Я человек
+									.c-welcome-form__col
+										span.c-welcome-form__label Вы точно не робот?
+									.c-welcome-form__col
+										label.c-welcome-form__label-radio(for="robot_y")
+											input.c-welcome-form__input-radio(type="radio" id="robot_y" name="robot" value="y")
+											.c-welcome-form__input-radio__active
+											span.c-welcome-form__label Да
+										label.c-welcome-form__label-radio(for="robot_no")
+											input.c-welcome-form__input-radio(type="radio" id="robot_no" name="robot" value="n")
+											.c-welcome-form__input-radio__active
+											span.c-welcome-form__label Не уверен
+									.c-welcome-form__col.c-welcome-form__btn-wrap
+										.c-welcome-form__col-row
+											input.c-welcome-form__input-btn.js-aut-flip(type="button" value="На главную")
+										.c-welcome-form__col-row
+											input.c-welcome-form__input-btn(type="submit" value="Войти")
+		.c-welcome-footer © Владимир Астахов | создано с любовью в LoftSchool | 2016

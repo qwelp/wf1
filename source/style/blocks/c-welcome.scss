@@ -1,11 +1,48 @@
+.c-welcome-wrapper {
+	display: flex;
+	flex-direction: column;
+	flex: 1;
+	position: relative;
+}
+.c-welcome-popup {
+	flex: 1 1 100%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.c-welcome-autr {
+	display: flex;
+	justify-content: flex-end;
+	align-items: center;
+
+	@include tablet(){
+		justify-content: center;
+	}
+}
+
+.c-welcome-footer {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
 .c-welcome {
 	width: 379px;
-	@include centered();
 	background: rgba(#122620, .6);
-	border-radius: 6px;
-	padding-top: 40px;
 	text-align: center;
+
+	border-radius: 16px;
 	overflow: hidden;
+
+	position: relative;
+
+
+
+
+	@include tablet() {
+		width: 348px;
+	}
 
 	&__container {
 		padding-bottom: 30px;
@@ -14,6 +51,8 @@
 	&__group {
 		padding-left: 20px;
 		padding-right: 20px;
+
+
 
 		&-btn {
 			padding: 0;
@@ -24,6 +63,13 @@
 				&:hover {
 					background: #477c38;
 				}
+			}
+
+			& .c-feedback__group-btnRow:first-child .c-btn-form {
+				border-bottom-left-radius: 8px;
+			}
+			& .c-feedback__group-btnRow:last-child .c-btn-form {
+				border-bottom-right-radius: 8px;
 			}
 		}
 
@@ -45,6 +91,8 @@
 					background: rgba(#dee3e7, .5);
 				}
 			}
+
+
 		}
 	}
 }
@@ -54,23 +102,105 @@
 }
 
 .c-welcome-footer {
-	position: absolute;
-	bottom: 30px;
-	width: 100%;
-	text-align: center;
 	@include roboto();
 	color: #ffffff;
+	height: 80px;
+
+	@include iphone() {
+		padding: 0 20px;
+		text-align: center;
+		font-size: 17px;
+	}
 }
 
-.c-welcome-autr {
-	position: absolute;
-	top: 20px;
-	right: 20px;
+
+.c-welcome-autr__link {
 	display: inline-block;
+	margin: 25px;
 	padding: 10px 30px;
 	border-radius: 30px;
 	color: #ffffff;
 	border: 1px solid #fff;
 	@include roboto();
 	text-decoration: none;
+}
+
+.c-welcome-autr__link {
+	&.visible {
+		visibility: visible;
+		opacity: 1;
+		transition: all .7s;
+	}
+	&.hidden {
+		visibility: hidden;
+		opacity: 0;
+		transition: all .7s;
+	}
+}
+
+.flipper {
+
+}
+
+.flip-container {
+	perspective: 1000px;
+	padding-top: 40px;
+}
+.flip-container.hover .flipper {
+	transform: rotateY(-180deg); }
+
+.flip-container, .front, .back {
+	width: 100%;
+	height: 100%;
+}
+.flipper {
+	transition: 0.6s;
+	transform-style: preserve-3d;
+
+	position: relative;
+}
+.front, .back {
+	backface-visibility: hidden;
+	//position: absolute;
+	top: 0;
+	left: 0;
+}
+.front {
+	z-index: 2;
+	/* for firefox 31 */
+	transform: rotateY(0deg);
+	//position: absolute;
+
+}
+.back {
+	transform: rotateY(180deg);
+	position: absolute;
+}
+
+
+.waterWebgl {
+	width: 100vw;
+	height: 100vh;
+	position: fixed;
+	left: 0;
+	top: 0;
+	overflow: hidden;
+}
+
+.Background {
+	position: absolute;
+	top: 0;
+	right: 0;
+	bottom: 0;
+	left: 0;
+}
+
+.Background::after {
+	content: '';
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background: linear-gradient(135deg, rgba(0, 0, 0, 0.5), transparent 50%, rgba(0, 0, 0, 0.5));
 }

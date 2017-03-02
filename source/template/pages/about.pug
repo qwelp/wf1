@@ -8,7 +8,7 @@ block variables
 block content
 	section.l-section.l-hero
 		.l-hero__bg
-			img.hero__bg-img(src="assets/img/water.jpg" alt="")
+			//img.hero__bg-img(src="assets/img/water.jpg" alt="")
 		.l-hero__container
 			img.c-hero__title-pic(src="assets/img/portfolio_header.png" alt="")
 			.c-user
@@ -23,8 +23,7 @@ block content
 						svg.c-socials__icon
 							use(xlink:href=`assets/img/sprite.svg#${icon}`)
 		.c-menu-burger
-			svg.c-menu-burger__icon
-				use(xlink:href=`assets/img/sprite.svg#hamburger`)
+			include ../common/menu
 		a.c-arrow(href="#")
 			svg.c-arrow__icon
 				use(xlink:href=`assets/img/sprite.svg#arrow_down`)
@@ -73,6 +72,7 @@ block content
 							.c-contact-popup__col
 								svg.c-contact-popup__icon
 									use(xlink:href=`assets/img/sprite.svg#${item.icon}`)
-							.c-contact-popup__col #{item.text}
+							.c-contact-popup__col
+								a.c-contact-popup__link(href="#")=item.text
 
 

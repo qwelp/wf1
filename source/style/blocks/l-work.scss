@@ -52,36 +52,144 @@ $work: #f8f9f5;
 }
 
 .l-work-jobs {
-	@extend %clearfix;
-	background: #ebefe2;
+	display: flex;
+	flex-flow: wrap row;
+	position: relative;
 
-	&__col {
-		position: relative;
-		float: left;
-		width: 50%;
+	@include tablet(){
+		flex-flow: wrap column;
+	}
+}
+.l-work-jobs__col {
+	flex: 1 1 45%;
+}
 
-		&_left {
-			background: #ebefe2;
-			padding-top: 244px;
-			padding-bottom: 254px;
+.l-work-jobs__col:nth-child(1) {
 
-			&-wrap {
-				float: right;
-				width: 320px;
-				margin-right: 143px;
-				text-align: center;
-			}
-		}
+	@include tablet(){
+		order: 2;
+	}
+}
+.l-work-jobs__col:nth-child(3) {
 
-		&_right {
-			background: #e1e4d7;
-			padding-top: 114px;
+	visibility: hidden;
+	@include tablet(){
+		display: none;
+	}
+}
+.l-work-jobs__col:nth-child(2) {
+	background: #e1e4d7;
+	@include tablet(){
+		order: 1;
+	}
+}
+.l-work-jobs__col:nth-child(4) {
+	background: #e1e4d7;
+	@include tablet(){
+		order: 3;
+	}
+}
+
+.c-works-img__wrapPic {
+	text-align: center;
+	padding-top: 100px;
+	padding-bottom: 40px;
+	@include tablet(){
+		padding-top: 50px;
+		padding-bottom: 80px;
+	}
+	@include iphone(){
+		padding-bottom: 50px;
+	}
+}
+.c-works-img__pic {
+	vertical-align: middle;
+	max-width: 100%;
+	height: auto;
+
+	@include desktop(){
+		max-width: 90%;
+	}
+}
+.c-works-img__items {
+	display: flex;
+
+	@include tablet(){
+
+	}
+}
+.c-works-img__item {
+	width: 100%;
+	height: auto;
+}
+
+.c-works-img__item {
+	position: relative;
+
+	&-wrapPic {
+		width: 100%;
+		height: auto;
+		&:after {
+			display: block;
+			content: "";
+			position: absolute;
+			left: 0;
+			top: 0;
+			width: 100%;
+			height: 100%;
+			background: rgba(#b0b7aa, .7);
 		}
 	}
 
-	&__tags {
-		color: #4e8839;
-		@include roboto(m);
-		margin-bottom: 55px;
+	&-pic {
+		vertical-align: middle;
+		width: 100%;
+		height: auto;
+	}
+
+	&-wrapIcon {
+		@include centered();
+	}
+
+	&-icon {
+		fill: #fff;
+		width: 43px;
+		height: 27px;
+	}
+}
+
+.l-work-jobs-elem {
+	position: absolute;
+	top: 0;
+	left: 0;
+	bottom: 0;
+	right: 50%;
+	background: #ebefe2;
+
+	@include tablet(){
+		position: inherit;
+		text-align: center;
+	}
+}
+.l-work-jobs-elem__block {
+	width: 320px;
+	text-align: center;
+	@include centered();
+
+	@include tablet(){
+		display: inline-block;
+		position: inherit;
+		transform: translate(0, 0);
+		padding-top: 45px;
+		padding-bottom: 60px;
+	}
+}
+.l-work-jobs__tags {
+	color: #4e8839;
+	@include roboto(m);
+	margin-bottom: 55px;
+
+	@include iphone(){
+		margin-bottom: 30px;
 	}
 }

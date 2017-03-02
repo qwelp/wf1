@@ -1,0 +1,42 @@
+/*.parallax {
+	overflow-x: hidden;
+	overflow-y: auto;
+	position: absolute;
+	top: 0;
+	right: 0;
+	bottom: 0;
+	left: 50%;
+	margin-left: -2000px;
+	width: 4000px;
+
+	perspective:  30px;
+}
+.parallax__layer {
+	position: absolute;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+}
+.parallax__img {
+	position: absolute;
+	bottom: 0;
+	display: block;
+}
+
+.parallax__layer:nth-child(2){
+	transform: translateZ(0px) scale(1);
+}
+.parallax__layer:nth-child(1){
+	transform: translateZ(-50px) scale(1.5);
+}
+*/
+
+/**
+//.parallax#parallax
+		.parallax__layer
+			img.parallax__img(src="assets/img/water-maps.jpg" alt="")
+		.parallax__layer
+			img.parallax__img(src="assets/img/water.jpg" alt="")
+
+*/

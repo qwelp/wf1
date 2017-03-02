@@ -13,7 +13,7 @@ html
 
     //- favicon block start
     //- favicon block end
-
+    link(rel="shortcut icon" href="/images/favicon.png" type="image/png")
     link(rel='stylesheet' href='assets/css/foundation.css')
     link(rel='stylesheet' href='assets/css/app.css')
     script(src='assets/js/foundation.js' defer)
@@ -26,6 +26,11 @@ html
 
   body
     .wrapper
-      block content
-    footer.footer
-      include common/footer
+      .maincontent
+        block content
+      if(blog_footer)
+        footer(class=`footer ${blog_footer}`)
+          include common/footer
+      else
+        footer.footer
+          include common/footer

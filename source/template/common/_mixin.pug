@@ -1,5 +1,5 @@
-mixin list(cl, arr)
-	ul(class=`${cl}`)
-		each item in arr
-			li(class=`${cl}__item`)
-				a(class=`${cl}__link` href=`${item.url}`)=item.name
+mixin list(cl, arr, dir = '/')
+				ul(class=`${cl}`)
+					each item in arr
+						li(class=`${cl}__item`)
+							a(class=`${cl}__link` href=`${dir}${item.url}`)=item.name

@@ -12,6 +12,10 @@
 		position: relative;
 		margin-bottom: 40px;
 
+		@include iphone(){
+			margin-bottom: 20px;
+		}
+
 		&:after {
 			@include centered(x);
 			bottom: 0;

@@ -5,11 +5,16 @@
 	background: rgba(#f4f5f0, .85);
 	border-radius: 5px;
 	padding: 35px 40px;
+
+
+
+
+	@include iphone() {
+		top: 0;
+		width: 100%;
+	}
 }
 
-.c-contact-popup__list {
-
-}
 
 .c-contact-popup__wrap {
 	display: table;
@@ -19,9 +24,19 @@
 	display: table-cell;
 	vertical-align: middle;
 
+	@include iphone() {
+		padding-left: 20px;
+		padding-right: 20px;
+		font-size: 18px;
+	}
+
 	&:last-child {
 		width: 100%;
 		padding-left: 15px;
+
+		@include iphone() {
+			padding-left: 10px;
+		}
 	}
 }
 .c-contact-popup__item {
@@ -29,6 +44,19 @@
 	color: #455a64;
 	&:not(:first-child){
 		margin-top: 25px;
+	}
+}
+
+.c-contact-popup__link {
+	@include roboto(m);
+	color: #455a64;
+	text-decoration: none;
+	display: inline-block;
+	transition: all .3s;
+
+	&:hover {
+		opacity: .8;
+		border-bottom: 1px solid #455a64;
 	}
 }
 

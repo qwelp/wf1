@@ -1,63 +1,66 @@
-.footer__wrap {
-	display: table;
+.footer {
+	position: absolute;
+	bottom: -3px;
 	width: 100%;
-	height: 94px;
-	background: rgba(#373e42, .85);
-	padding-top: 26px;
-	padding-bottom: 30px;
 }
 
+.footer__wrap {
+	display: flex;
+	flex-flow: wrap row;
+	align-items: flex-start;
+	background: rgba(#373e42, .85);
+	padding: 30px 0;
+
+	@include iphone() {
+		flex-flow: wrap column;
+		align-items: center;
+		padding-left: 20px;
+		padding-right: 20px;
+	}
+}
 .footer__col {
-	display: table-cell;
-	vertical-align: top;
-	width: 33.3333333333%;
+	flex: 1;
 	padding-right: 30px;
 	padding-left: 30px;
 
+	@include iphone() {
+		padding-left: 0;
+		padding-right: 0;
+	}
+
 	&:not(:first-child){
 		border-left: 1px solid #69716e;
-	}
-}
 
-.footer-menu {
-
-	@extend %clearfix;
-	margin-bottom: 20px;
-
-	&__item {
-		float: left;
-		&:not(:first-child){
-			margin-left: 12px;
+		@include iphone() {
+			border-left: 0;
 		}
 	}
-
-	&__link {
-		@include roboto(m);
-		font-size: 16px;
-		color: #ffffff;
-		text-decoration: none;
+}
+.footer__col:nth-child(1) {
+	@include iphone(){
+		padding-bottom: 20px;
 	}
 }
-
-.footer__info, .footer__lesson, .footer__author, .footer__copy {
-	color: #ffffff;
+.footer__col:nth-child(2) {
+	@include iphone(){
+		border-top: 1px solid #69716e;
+		border-bottom: 1px solid #69716e;
+		padding-top: 20px;
+		padding-bottom: 20px;
+	}
 }
-
-.footer__info {
-	@include roboto(l);
+.footer__col:nth-child(3) {
+	@include desktop(){
+		flex-basis: 100%;
+		padding-top: 50px;
+	}
+	@include iphone() {
+		padding-top: 20px;
+		@include iphone(){
+			line-height: 35px;
+		}
+	}
 }
-
-.footer__lesson {
-	opacity: .5;
-	@include roboto(li);
-	margin-bottom: 2px;
-}
-
-.footer__author {
-	opacity: .5;
-	@include roboto(bi);
-}
-
 .footer__copy {
 	position: relative;
 	top: -3px;
@@ -65,4 +68,78 @@
 	text-align: center;
 	line-height: 38px;
 	background: rgba(#6c9c5a, .85);
+	color: #ffffff;
+
+	@include iphone(){
+		line-height: 25px;
+		padding-top: 8px;
+		padding-bottom: 8px;
+		padding-left: 15px;
+		padding-right: 15px;
+	}
+}
+
+.footer-menu {
+
+	display: flex;
+	flex-flow: wrap row;
+	margin-bottom: 20px;
+	margin-left: -12px;
+
+	&__item {
+		margin-left: 12px;
+	}
+
+	&__link {
+		@include roboto();
+		font-size: 16px;
+		color: #ffffff;
+		text-decoration: none;
+		white-space: nowrap;
+
+		@include iphone(){
+			font-size: 17px;
+		}
+	}
+}
+
+.footer__info, .footer__lesson, .footer__author, .footer__copy {
+	color: #ffffff;
+
+	@include iphone() {
+		font-size: 18px;
+	}
+}
+
+.footer__info {
+	@include roboto(l);
+
+	@include iphone() {
+		text-align: center;
+		font-size: 17px;
+	}
+}
+
+.footer__lesson {
+	opacity: .5;
+	@include roboto(li);
+	padding: 0;
+	margin: 0;
+	line-height: 21px;
+	margin-bottom: 3px;
+
+}
+
+.footer__author {
+	opacity: .5;
+	@include roboto(bi);
+}
+
+.footer__blockquote {
+	margin: 0;
+	padding: 0;
+
+	@include iphone() {
+		text-align: center;
+	}
 }

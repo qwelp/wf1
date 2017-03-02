@@ -1,0 +1,229 @@
+.c-welcome-form {
+	display: flex;
+	flex-direction: column;
+	height: 100%;
+
+	border-radius: 6px;
+	overflow: hidden;
+}
+.c-welcome-form__form {
+	height: 100%;
+}
+.c-welcome-form__title {
+	@include webissimo();
+	font-size: 35px;
+	color: #ffffff;
+	position: relative;
+	padding-bottom: 25px;
+	margin-bottom: 20px;
+	margin-top: -10px;
+
+	&:before {
+		position: absolute;
+		display: block;
+		content: "";
+		width: 90px;
+		height: 3px;
+		background: #ffffff;
+		transform: translateX(-50%);
+		left: 50%;
+		bottom: 0;
+	}
+}
+.c-welcome-form__col {
+	display: flex;
+	justify-content: center;
+
+	&:not(:first-child){
+		padding-top: 20px;
+	}
+}
+
+.c-welcome-form__input {
+	display: inline-block;
+	flex-direction: row;
+	background: #f0efe9;
+}
+
+.c-welcome-form__col-input {
+	display: flex;
+	align-items: center;
+	flex: 1;
+	width: auto;
+	flex-direction: row;
+	margin-left: 20px;
+	margin-right: 20px;
+	border-radius: 30px;
+	overflow: hidden;
+}
+
+.c-welcome-form__input-text {
+	background: #fff;
+	border: 0;
+	line-height: 43px;
+	width: 100%;
+	padding-left: 18px;
+	outline: none;
+}
+
+.c-welcome-form__input-icone {
+	fill: #d5d9d8;
+	width: 16px;
+	height: 16px;
+	position: relative;
+	top: 1px;
+	left: 2px;
+}
+
+.c-welcome-form__input-radio {
+
+}
+
+.c-welcome-form__input-checkbox {
+
+}
+
+.c-welcome-form__label {
+	opacity: .8;
+}
+
+.c-welcome-form__label-radio {
+	position: relative;
+	margin-bottom: 10px;
+
+
+	&:not(:first-child) {
+		margin-left: 40px;
+	}
+}
+
+.c-welcome-form__label-radio .c-welcome-form__label {
+	margin-left: 8px;
+	position: relative;
+	top: -3px;
+}
+.c-welcome-form__input-radio__active {
+	position: absolute;
+	top: -1px;
+	left: -2px;
+	&:before {
+		display: inline-block;
+		@include forest();
+		content: '';
+		width: 10px;
+		height: 10px;
+		background: #ffffff;
+		border: 4px solid #fff;
+		border-radius: 50%;
+		box-shadow: 0 3px 3px rgba(0, 0, 0, 0.3);
+		cursor: pointer;
+		opacity: 1;
+		transition: all .6s;
+	}
+}
+.c-welcome-form__label-radio .c-welcome-form__input-radio:checked + div {
+	&:before {
+		background: #6c9c5a;
+	}
+	& + span {
+		color: #6c9c5a;
+		transition: all .6s;
+	}
+}
+
+.c-welcome-form__label-checkbox {
+	position: relative;
+	width: 20px;
+	height: 20px;
+	margin-right: 8px;
+}
+.c-welcome-form__input-checkbox__active {
+
+	&:before {
+		position: absolute;
+		top: -1px;
+		left: -2px;
+		display: block;
+		@include forest();
+		content: '';
+		color: #6c9c5a;
+		font-size: 8px;
+		text-align: center;
+		line-height: 20px;
+		width: 100%;
+		height: 100%;
+		background: #6c9c5a;
+		border-radius: 3px;
+		cursor: pointer;
+		transition: all .7s;
+	}
+}
+.c-welcome-form__label-checkbox .c-welcome-form__input-checkbox:checked + div {
+	&:before {
+		color: #ffffff;
+		content: '\e800';
+	}
+}
+
+
+.c-welcome-form__col-input .c-welcome-form__col-row:first-child {
+	background: #f0efe9;
+	line-height: 45px;
+	padding: 0 16px;
+}
+.c-welcome-form__col-input .c-welcome-form__col-row:last-child {
+	background: #fff;
+	flex: 1;
+}
+
+
+.c-welcome-form__btn-wrap {
+	flex-direction: row;
+	margin-top: auto;
+}
+.c-welcome-form__btn-wrap .c-welcome-form__col-row {
+	flex: 1;
+	position: relative;
+
+	&:not(:first-child) {
+		&:before {
+			position: absolute;
+			top: 0;
+			left: -1px;
+			content: "";
+			width: 2px;
+			height: 100%;
+			background: rgba(#dee3e7, .5);
+		}
+	}
+}
+
+.c-welcome-form__input-btn {
+	width: 100%;
+	border: 0;
+	background: #608d53;
+	@include roboto(m);
+	font-size: 16px;
+	padding-top: 15px;
+	padding-bottom: 15px;
+	color: #ffffff;
+	transition: all .3s;
+	outline: none;
+
+	&:hover {
+		background: #497f38;
+		cursor: pointer;
+		outline: none;
+	}
+	&:active {
+		background: rgba(#dee3e7, .7);
+		cursor: pointer;
+		outline: none;
+	}
+}
+
+.c-welcome-form__label {
+	@include roboto();
+	color: #ffffff;
+	font-size: 15px;
+}

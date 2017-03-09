@@ -4,8 +4,8 @@ extends ../_template
 block variables
 	- var title = 'Works'
 
-
 block content
+	include ../common/preloader
 	section.l-section.l-hero
 		.l-hero__bg
 			//img.hero__bg-img(src="assets/img/water.jpg" alt="")
@@ -33,6 +33,47 @@ block content
 				polygon(points="0,110 1000,110 1000,0")
 		.l-work__row_title
 			.c-section-title(style="background-image: url('assets/img/works_header.png')") МОИ РАБОТЫ
+	section.section.works
+		.works__content
+			.works__left
+				.works-slider__content
+					.works-slider__content-wrapper
+						.works-slider__display
+							img.works-slider__display-pic(src='', alt='')
+						.works-slider__item-about
+							.works__subtitle
+								.subtitle
+							.works__content-desc
+							.works__content-btn
+								a.works__content-view(href='#')
+									svg.c-btn__icon
+										use(xlink:href=`assets/img/sprite.svg#link`)
+									span.works__content-view-text Посмотреть сайт
+			.works__right
+				.works-slider
+					.works-slider__controls
+						a.works-slider__control-btn.works-slider__control-btn_left(href='#')
+							svg.c-works-img__item-icon
+								use(xlink:href=`assets/img/sprite.svg#portf_arrow_down`)
+							ul.works-slider__control-list
+								li.works-slider__control-item(data-full='assets/img/work-1.png', data-title='Агентсво интернет решений "ITLoft"', data-skills='node', data-link='http://itloft.ru/')
+									img.works-slider___control-img(src='assets/img/work-1.png')
+								li.works-slider__control-item(data-full='assets/img/work-2.png', data-title='Школа онлай-образования "LoftSchool"', data-skills='html5, CSS3, javascript, php', data-link='http://loftschool.com/')
+									img.works-slider___control-img(src='assets/img/work-2.png')
+								li.works-slider__control-item(data-full='assets/img/work-3.png', data-title='Портал обучающих уроков "LoftBlog"', data-skills='Ruby on Rails, javascript, RESTful', data-link='http://loftblog.ru/')
+									img.works-slider___control-img(src='assets/img/work-3.png')
+						a.works-slider__control-btn.works-slider__control-btn_right(href='#')
+							svg.c-works-img__item-icon
+								use(xlink:href=`assets/img/sprite.svg#portf_arrow_up`)
+	//section.l-section.l-work
+		.l-work__col.l-work__col_left
+			svg(viewBox="0 0 1000 110" preserveAspectRatio="none").c-work__triangle
+				polygon(points="0,0 0,110 1000,110")
+		.l-work__col.l-work__col_right
+			svg(viewBox="0 0 1000 110" preserveAspectRatio="none").c-work__triangle
+				polygon(points="0,110 1000,110 1000,0")
+		.l-work__row_title
+			.c-section-title(style="background-image: url('assets/img/works_header.png')") МОИ РАБОТЫ
 		.l-work-jobs
 			.l-work-jobs__col
 				.l-work-jobs-elem
@@ -51,20 +92,34 @@ block content
 			.l-work-jobs__col
 			.l-work-jobs__col
 				.c-works-img__items
-					.c-works-img__item
-						.c-works-img__item-wrapPic
-							img.c-works-img__item-pic(src="assets/img/work-2.png" alt="")
+					.c-works-img__item.c-works-img__item-first
+						.c-works-img__item-imgHide
+							img.c-works-img__item-imgHide-pic(src=`assets/img/work-1.png` alt="")
+						each item in [1,2,3]
+							if(item == 1)
+								.c-works-img__item-wrapPic.active
+									img.c-works-img__item-pic(src=`assets/img/work-${item}.png` alt="")
+							else
+								.c-works-img__item-wrapPic
+									img.c-works-img__item-pic(src=`assets/img/work-${item}.png` alt="")
 						.c-works-img__item-wrapIcon
-							a(href="#")
-								svg.c-works-img__item-icon
-									use(xlink:href=`assets/img/sprite.svg#portf_arrow_down`)
-					.c-works-img__item
-						.c-works-img__item-wrapPic
-							img.c-works-img__item-pic(src="assets/img/work-3.png" alt="")
-						.c-works-img__item-wrapIcon
-							a(href="#")
+							a.slider__click-top(href="#")
 								svg.c-works-img__item-icon
 									use(xlink:href=`assets/img/sprite.svg#portf_arrow_up`)
+					.c-works-img__item.c-works-img__item-last
+						.c-works-img__item-imgHide
+							img.c-works-img__item-imgHide-pic(src=`assets/img/work-1.png` alt="")
+						each item in [1,2,3]
+							if(item == 1)
+								.c-works-img__item-wrapPic.active
+									img.c-works-img__item-pic(src=`assets/img/work-${item}.png` alt="")
+							else
+								.c-works-img__item-wrapPic
+									img.c-works-img__item-pic(src=`assets/img/work-${item}.png` alt="")
+						.c-works-img__item-wrapIcon
+							a.slider__click-down(href="#")
+								svg.c-works-img__item-icon
+									use(xlink:href=`assets/img/sprite.svg#portf_arrow_down`)
 	section.l-section.l-comments
 		.l-comments__title
 			.c-section-title(style="background-image: url('assets/img/about_header.png')") Что обо мне<br />говорят

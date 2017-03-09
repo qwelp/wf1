@@ -66,3 +66,59 @@ ul {
 		clear: both;
 	}
 }
+
+.preloader {
+	//display: none;
+	position: fixed;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	z-index: 9999;
+	//background: url(../img/forest_preloader.gif);
+	//background: url(../img/forest_prel_bg.jpg);
+	background: rgba(#477c38, 1);
+
+	&__spinner {
+		@include centered();
+	}
+
+	&__icon {
+		fill: #ffffff;
+		stroke: #ffffff;
+
+		& g {
+			animation-name: dash;
+			animation-duration: 1s;
+			animation-timing-function: linear;
+			animation-iteration-count: infinite;
+			animation-direction: reverse;
+			stroke-dasharray: 50;
+			stroke-dashoffset: 5;
+		}
+
+		& g:first-child {
+
+		}
+		& g:nth-child(2) {
+			animation-delay: .2s;
+		}
+		& g:nth-child(3) {
+			animation-delay: .4s;
+		}
+
+		& text {
+			@include roboto(l);
+			font-size: 20px;
+		}
+	}
+}
+
+@-webkit-keyframes dash {
+	from {
+		stroke-dasharray: 50;
+	}
+	to {
+		stroke-dashoffset: 100;
+	}
+}

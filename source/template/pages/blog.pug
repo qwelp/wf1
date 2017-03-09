@@ -7,6 +7,7 @@ block variables
 
 
 block content
+	include ../common/preloader
 	section.l-section.l-hero
 		.l-hero__bg
 			//img.hero__bg-img(src="assets/img/water.jpg" alt="")
@@ -34,20 +35,18 @@ block content
 			svg(viewBox="0 0 1000 110" preserveAspectRatio="none").c-work__triangle.l-blog__triangle
 				polygon(points="0,110 1000,110 1000,0")
 	section.l-section.l-blog
-		.l-blog__col.l-blog__col_left
+		aside.l-blog__col.l-blog__col_left
 			.l-blog-menu
-				ul.l-blog-menu__items
-					each item, i in ['Самое важное в SASS','Приёмы в вёрстке, без которых не обходится ни один сайт','Самый необходимый набор Gulp плагинов','Почему я выбрал Jade']
-						li.l-blog-menu__item
-							if i == 0
-								a.l-blog-menu__link.active(href="#")=item
-							else
-								a.l-blog-menu__link(href="#")=item
-		.l-blog__col.l-blog__col_right
+				.wrap-menu
+					.wrap-menu__table
+					ul.l-blog-menu__items.menu
+						each item, i in blog
+							li.l-blog-menu__item.menu__item=item.name
+		main.l-blog__col.l-blog__col_right
 			.l-blog-list
 				ul.l-blog-list__items
-					each item, i in blog 
-						li.l-blog-list__item
+					each item, i in blog
+						li.l-blog-list__item.news
 							if i == 0
 								.l-blog-list__item-name.active=item.name
 								.l-blog-list__item-date=item.date

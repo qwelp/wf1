@@ -18,6 +18,22 @@
   <body>
     <div class="wrapper">
       <div class="maincontent">
+        <div class="preloader">
+          <div class="preloader__spinner">
+            <svg class="preloader__icon" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="80px" height="95.113px" viewbox="0 0 80 95.113" enable-background="new 0 0 80 95.113" xml:space="preserve">
+              <g>
+                <path fill="none" stroke-width="3.9003" stroke-miterlimit="10" d="M0 38.005c6.663 0 6.663 7.801 13.327 7.801 6.665 0 6.665-7.801 13.33-7.801 6.667 0 6.667 7.801 13.334 7.801 6.666 0 6.666-7.801 13.331-7.801 6.67 0 6.67 7.801 13.339 7.801S73.33 38.005 80 38.005"></path>
+              </g>
+              <g>
+                <path fill="none" stroke-width="3.9003" stroke-miterlimit="10" d="M0 61.684c6.663 0 6.663 7.801 13.327 7.801 6.665 0 6.665-7.801 13.33-7.801 6.667 0 6.667 7.801 13.334 7.801 6.666 0 6.666-7.801 13.331-7.801 6.67 0 6.67 7.801 13.339 7.801S73.33 61.684 80 61.684"></path>
+              </g>
+              <g>
+                <path fill="none" stroke-width="3.9003" stroke-miterlimit="10" d="M0 85.362c6.663 0 6.663 7.801 13.327 7.801 6.665 0 6.665-7.801 13.33-7.801 6.667 0 6.667 7.801 13.334 7.801 6.666 0 6.666-7.801 13.331-7.801 6.67 0 6.67 7.801 13.339 7.801S73.33 85.362 80 85.362"></path>
+              </g>
+              <text class="preloader__text" transform="matrix(1 0 0 1 19.9785 20.5957)">0%</text>
+            </svg>
+          </div>
+        </div>
         <section class="l-section l-hero">
           <div class="l-hero__bg">
             <!--img.hero__bg-img(src="assets/img/water.jpg" alt="")-->
@@ -101,7 +117,7 @@
                         <div class="c-skill">
                           <svg class="c-skills__circle">
                             <circle class="c-skills__circle-under" cx="55" cy="55" r="45"></circle>
-                            <circle class="c-skills__circle-above" cx="55" cy="55" r="45" transform="rotate(-90 55 55)"></circle>
+                            <circle class="sector c-skills__circle-above" data-procent="90" cx="55" cy="55" r="45" transform="rotate(-90 55 55)"></circle>
                           </svg>
                           <div class="c-skill__title">HTML5</div>
                         </div>
@@ -110,7 +126,7 @@
                         <div class="c-skill">
                           <svg class="c-skills__circle">
                             <circle class="c-skills__circle-under" cx="55" cy="55" r="45"></circle>
-                            <circle class="c-skills__circle-above" cx="55" cy="55" r="45" transform="rotate(-90 55 55)"></circle>
+                            <circle class="sector c-skills__circle-above" data-procent="80" cx="55" cy="55" r="45" transform="rotate(-90 55 55)"></circle>
                           </svg>
                           <div class="c-skill__title">CSS3</div>
                         </div>
@@ -119,7 +135,7 @@
                         <div class="c-skill">
                           <svg class="c-skills__circle">
                             <circle class="c-skills__circle-under" cx="55" cy="55" r="45"></circle>
-                            <circle class="c-skills__circle-above" cx="55" cy="55" r="45" transform="rotate(-90 55 55)"></circle>
+                            <circle class="sector c-skills__circle-above" data-procent="75" cx="55" cy="55" r="45" transform="rotate(-90 55 55)"></circle>
                           </svg>
                           <div class="c-skill__title">JavaScript &amp; jQuery</div>
                         </div>
@@ -133,7 +149,7 @@
                         <div class="c-skill">
                           <svg class="c-skills__circle">
                             <circle class="c-skills__circle-under" cx="55" cy="55" r="45"></circle>
-                            <circle class="c-skills__circle-above" cx="55" cy="55" r="45" transform="rotate(-90 55 55)"></circle>
+                            <circle class="sector c-skills__circle-above" data-procent="40" cx="55" cy="55" r="45" transform="rotate(-90 55 55)"></circle>
                           </svg>
                           <div class="c-skill__title">PHP</div>
                         </div>
@@ -142,7 +158,7 @@
                         <div class="c-skill">
                           <svg class="c-skills__circle">
                             <circle class="c-skills__circle-under" cx="55" cy="55" r="45"></circle>
-                            <circle class="c-skills__circle-above" cx="55" cy="55" r="45" transform="rotate(-90 55 55)"></circle>
+                            <circle class="sector c-skills__circle-above" data-procent="60" cx="55" cy="55" r="45" transform="rotate(-90 55 55)"></circle>
                           </svg>
                           <div class="c-skill__title">mySQL</div>
                         </div>
@@ -151,7 +167,7 @@
                         <div class="c-skill">
                           <svg class="c-skills__circle">
                             <circle class="c-skills__circle-under" cx="55" cy="55" r="45"></circle>
-                            <circle class="c-skills__circle-above" cx="55" cy="55" r="45" transform="rotate(-90 55 55)"></circle>
+                            <circle class="sector c-skills__circle-above" data-procent="40" cx="55" cy="55" r="45" transform="rotate(-90 55 55)"></circle>
                           </svg>
                           <div class="c-skill__title">Node.js &amp; npm</div>
                         </div>
@@ -160,7 +176,7 @@
                         <div class="c-skill">
                           <svg class="c-skills__circle">
                             <circle class="c-skills__circle-under" cx="55" cy="55" r="45"></circle>
-                            <circle class="c-skills__circle-above" cx="55" cy="55" r="45" transform="rotate(-90 55 55)"></circle>
+                            <circle class="sector c-skills__circle-above" data-procent="65" cx="55" cy="55" r="45" transform="rotate(-90 55 55)"></circle>
                           </svg>
                           <div class="c-skill__title">Mongo.db</div>
                         </div>
@@ -174,7 +190,7 @@
                         <div class="c-skill">
                           <svg class="c-skills__circle">
                             <circle class="c-skills__circle-under" cx="55" cy="55" r="45"></circle>
-                            <circle class="c-skills__circle-above" cx="55" cy="55" r="45" transform="rotate(-90 55 55)"></circle>
+                            <circle class="sector c-skills__circle-above" data-procent="80" cx="55" cy="55" r="45" transform="rotate(-90 55 55)"></circle>
                           </svg>
                           <div class="c-skill__title">Git</div>
                         </div>
@@ -183,7 +199,7 @@
                         <div class="c-skill">
                           <svg class="c-skills__circle">
                             <circle class="c-skills__circle-under" cx="55" cy="55" r="45"></circle>
-                            <circle class="c-skills__circle-above" cx="55" cy="55" r="45" transform="rotate(-90 55 55)"></circle>
+                            <circle class="sector c-skills__circle-above" data-procent="70" cx="55" cy="55" r="45" transform="rotate(-90 55 55)"></circle>
                           </svg>
                           <div class="c-skill__title">Gulp</div>
                         </div>
@@ -192,7 +208,7 @@
                         <div class="c-skill">
                           <svg class="c-skills__circle">
                             <circle class="c-skills__circle-under" cx="55" cy="55" r="45"></circle>
-                            <circle class="c-skills__circle-above" cx="55" cy="55" r="45" transform="rotate(-90 55 55)"></circle>
+                            <circle class="sector c-skills__circle-above" data-procent="75" cx="55" cy="55" r="45" transform="rotate(-90 55 55)"></circle>
                           </svg>
                           <div class="c-skill__title">Bower</div>
                         </div>
@@ -205,6 +221,109 @@
           </div>
         </section>
         <section class="l-section l-map">
+          <div class="map">
+            <div class="map" id="map">
+              <script>
+                function initMap() {
+                	var map = new google.maps.Map(document.getElementById('map'), {
+                		zoom: 16,
+                		mapTypeControl: false,
+                		scrollwheel: false,
+                		center: {lat: 55.667571, lng: 37.784409},
+                		styles: [
+                			{
+                				"featureType": "administrative",
+                				"elementType": "labels.text.fill",
+                				"stylers": [
+                					{
+                						"color": "#444444"
+                					}
+                				]
+                			},
+                			{
+                				"featureType": "landscape",
+                				"elementType": "all",
+                				"stylers": [
+                					{
+                						"color": "#f2f2f2"
+                					}
+                				]
+                			},
+                			{
+                				"featureType": "poi",
+                				"elementType": "all",
+                				"stylers": [
+                					{
+                						"visibility": "off"
+                					}
+                				]
+                			},
+                			{
+                				"featureType": "road",
+                				"elementType": "all",
+                				"stylers": [
+                					{
+                						"saturation": -100
+                					},
+                					{
+                						"lightness": 45
+                					}
+                				]
+                			},
+                			{
+                				"featureType": "road.highway",
+                				"elementType": "all",
+                				"stylers": [
+                					{
+                						"visibility": "simplified"
+                					}
+                				]
+                			},
+                			{
+                				"featureType": "road.arterial",
+                				"elementType": "labels.icon",
+                				"stylers": [
+                					{
+                						"visibility": "off"
+                					}
+                				]
+                			},
+                			{
+                				"featureType": "transit",
+                				"elementType": "all",
+                				"stylers": [
+                					{
+                						"visibility": "off"
+                					}
+                				]
+                			},
+                			{
+                				"featureType": "water",
+                				"elementType": "all",
+                				"stylers": [
+                					{
+                						"color": "#4e8839"
+                					},
+                					{
+                						"visibility": "on"
+                					}
+                				]
+                			}
+                		]
+                	});
+                	var image = 'assets/img/map_marker.png';
+                	var beachMarker = new google.maps.Marker({
+                		position: {lat: 55.668571, lng: 37.790511},
+                		map: map,
+                		icon: image,
+                		title: 'i am here :)'
+                	});
+                }
+                
+              </script>
+              <script async="" defer="" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCbjXtU9Xjwo3aJqfeWuLhpAf5UDfa1X7I&amp;callback=initMap"></script>
+            </div>
+          </div>
           <div class="c-contact-popup">
             <div class="c-block-title">
               <div class="c-block-title__wrap">Контакты</div>

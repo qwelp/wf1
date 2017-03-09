@@ -6,6 +6,7 @@ block variables
 
 
 block content
+	include ../common/preloader
 	section.l-section.l-hero
 		.l-hero__bg
 			//img.hero__bg-img(src="assets/img/water.jpg" alt="")
@@ -59,9 +60,11 @@ block content
 											.c-skill
 												svg.c-skills__circle
 													circle(cx="55" cy="55" r="45").c-skills__circle-under
-													circle(cx="55" cy="55" r="45" transform="rotate(-90 55 55)").c-skills__circle-above
+													circle.sector(data-procent=`${item.procent}` cx="55" cy="55" r="45" transform="rotate(-90 55 55)").c-skills__circle-above
 												.c-skill__title=item.name
 	section.l-section.l-map
+		.map
+			include ../common/map
 		.c-contact-popup
 			.c-block-title
 				.c-block-title__wrap Контакты

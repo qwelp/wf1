@@ -29,11 +29,8 @@
 
 .c-welcome {
 	width: 379px;
-	background: rgba(#122620, .6);
-	text-align: center;
 
-	border-radius: 16px;
-	overflow: hidden;
+	text-align: center;
 
 	position: relative;
 
@@ -144,7 +141,6 @@
 
 .flip-container {
 	perspective: 1000px;
-	padding-top: 40px;
 }
 .flip-container.hover .flipper {
 	transform: rotateY(-180deg); }
@@ -161,9 +157,12 @@
 }
 .front, .back {
 	backface-visibility: hidden;
+	padding-top: 20px;
 	//position: absolute;
 	top: 0;
 	left: 0;
+	background: rgba(#122620, .6);
+	border-radius: 16px;
 }
 .front {
 	z-index: 2;

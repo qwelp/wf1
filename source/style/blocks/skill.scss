@@ -81,6 +81,10 @@ $margin_skill: 30px;
 }
 
 .c-skills__circle-above {
-	stroke: $circle-above;
-	stroke-dasharray: 140;
+	stroke: $circle-under;
+	//stroke-dasharray: 200;
+}
+
+.sector {
+	transition: all 1s;
 }

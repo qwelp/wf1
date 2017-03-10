@@ -124,5 +124,10 @@
 		width: 26px;
 		height: 16px;
 		fill: #c8d9d1;
+		transition: all .3s;
+
+		&:hover {
+			fill: darken(#c8d9d1, 30%);
+		}
 	}
 }

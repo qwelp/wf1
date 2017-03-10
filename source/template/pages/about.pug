@@ -2,7 +2,7 @@ extends ../_template
 
 
 block variables
-	- var title = 'Hero'
+	- var title = 'About'
 
 
 block content
@@ -44,7 +44,7 @@ block content
 		.l-about__col.l-about__col_right
 			svg(viewBox="0 0 1000 110" preserveAspectRatio="none").c-about__triangle
 				polygon(points="0,110 1000,110 1000,0")
-			.l-about__col_right-wrap
+			.l-about__col_right-wrap#js-scroll-info
 				.l-skills
 					.c-block-title
 						.c-block-title__wrap Чем я могу быть<br /> вам полезен

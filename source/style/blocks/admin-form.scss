@@ -1,0 +1,112 @@
+.admin-form {
+	display: flex;
+	flex-direction: column;
+}
+
+.admin-form__row {
+	&:not(:last-child){
+		margin-bottom: 20px;
+	}
+}
+
+.admin-form__info {
+	@include roboto(m);
+	color: #566358;
+	margin-bottom: 20px;
+}
+
+.admin-form__input, .admin-form__textarea {
+	border-radius: 6px;
+	color: #566358;
+	font-size: 16px;
+	@include roboto();
+	border: 0;
+	padding: 15px 20px;
+}
+.admin-form__input {
+	width: 300px;
+
+	@include tablet(){
+		width: 100%;
+		box-sizing: border-box;
+	}
+}
+.admin-form__textarea {
+	width: 500px;
+	height: 166px;
+	@include tablet(){
+		width: 100%;
+		box-sizing: border-box;
+	}
+}
+
+.admin-form__file {
+	display: flex;
+	cursor: pointer;
+	background: url(../img/file-upload.png) no-repeat 0 0;
+	padding-left: 50px;
+	height: 50px;
+	white-space: nowrap;
+
+}
+
+.admin-form__file-title {
+	@include roboto();
+	color: #6c9c5a;
+	position: relative;
+	top: 4px;
+}
+
+.admin-form__file-input {
+	visibility: hidden;
+
+	@include tablet(){
+		width: 100%;
+	}
+}
+
+.admin-form__control {
+	margin-top: 20px;
+	&-btn {
+		background: #6c9c5a;
+		padding: 12px;
+		border-radius: 6px;
+		border: 0;
+		color: #ffffff;
+		@include roboto();
+		cursor: pointer;
+
+		&:hover {
+			background: darken(#6c9c5a, 5%);
+		}
+		&:focus {
+			outline: none;
+		}
+		&:active {
+			background: darken(#6c9c5a, 10%);
+		}
+	}
+}
+
+.admin-check {
+
+	width: 280px;
+	@include centered();
+	background: #ffffff;
+	@include roboto();
+	color: #566358;
+	border-radius: 6px;
+	box-shadow: 0 0 3px #d1d1d1;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	padding: 20px;
+	display: none;
+
+	&__msg {
+
+	}
+	&__control {
+
+	}
+}

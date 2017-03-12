@@ -1,0 +1,148 @@
+.admin__bg {
+	background: url(../img/admin_bg.png) no-repeat center center fixed;
+	background-size: cover;
+	position: relative;
+
+	&:before {
+		content: "";
+		position: fixed;
+		width: 100%;
+		height: 100%;
+		top: 0;
+		left: 0;
+		background-color: rgba(#ffffff, .8);
+	}
+}
+
+.admin__wrapper {
+	display: flex;
+	flex-direction: column;
+	position: relative;
+	width: 100%;
+}
+
+.admin__header {
+	@include roboto(m);
+	font-size: 26px;
+	color: #ffffff;
+	background: #6c9c5a;
+	padding: 30px;
+	display: flex;
+	justify-content: center;
+
+	@include tablet(){
+		flex-direction: column;
+		text-align: center;
+		line-height: 25px;
+		font-size: 20px;
+	}
+
+	&-left, &-right {
+		flex: 1;
+		display: flex;
+	}
+	&-left {
+		@include tablet(){
+			order: 1;
+		}
+	}
+	&-right {
+		justify-content: flex-end;
+		align-self: center;
+
+		@include tablet(){
+			order: -1;
+		}
+	}
+
+	&-left, &-right {
+		@include tablet(){
+			align-self: center;
+		}
+	}
+
+	&-link {
+		color: #ffffff;
+		opacity: .7;
+		@include roboto();
+		font-size: 16px;
+		line-height: 15px;
+		text-decoration: none;
+		border-bottom: 1px solid #fff;
+		display: inline-block;
+
+		@include tablet(){
+			margin-bottom: 10px;
+		}
+	}
+}
+
+.admin__main {
+	padding: 50px 30px;
+}
+
+.admin-menu {
+	background: #f0efe9;
+	&__items {
+		display: flex;
+
+		@include tablet(){
+			flex-direction: column;
+		}
+	}
+	&__item {
+		flex-basis: 180px;
+		border-right: 2px solid #ffffff;
+
+		@include tablet(){
+			flex: 1;
+			border-right: 0;
+
+			&:not(:last-child) {
+				border-bottom: 2px solid #ffffff;
+			}
+		}
+
+		&.active {
+			background: #ffffff;
+
+			& .admin-menu__link {
+				color: #6c9c5a;
+			}
+		}
+	}
+	&__link {
+		display: block;
+		padding: 20px;
+		color: #566358;
+		@include roboto(m);
+		font-size: 16px;
+		text-transform: uppercase;
+		text-decoration: none;
+		text-align: center;
+	}
+}
+
+
+.admin-tabs {
+	height: 100%;
+	display: flex;
+	flex-direction: column;
+	margin-bottom: 40px;
+}
+.admin-tab {
+	flex-grow: 1;
+	display: none;
+
+	&.active {
+		display: block;
+	}
+}
+
+.admin__title {
+	@include roboto(m);
+	font-size: 21px;
+	color: #566358;
+	margin-bottom: 45px;
+}
+

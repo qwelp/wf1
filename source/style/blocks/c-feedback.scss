@@ -29,7 +29,7 @@
 		padding: 15px 20px;
 		color: #5d5a55;
 		@include roboto();
-		width: 90%;
+		width: 100%;
 		margin-bottom: 20px;
 		border-radius: 30px;
 		outline: none;
@@ -42,6 +42,7 @@
 
 
 	&__group {
+		display: block;
 		padding-left: 20px;
 		padding-right: 20px;
 

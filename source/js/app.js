@@ -3,6 +3,7 @@
 $(document).ready(function () {
 	$('#toggle').click(function () {
 		$(this).toggleClass('active');
+		$("html,body").css("overflow","auto");
 		$('#overlay').toggleClass('open');
 	});
 
